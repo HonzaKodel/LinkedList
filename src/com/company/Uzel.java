@@ -7,8 +7,8 @@ public class Uzel {
         private Uzel last;
 
     public Uzel(int hodnota) {
-    }
 
+    }
 
     public String getHodnota() {
             return hodnota;

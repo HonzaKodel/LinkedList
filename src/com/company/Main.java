@@ -9,11 +9,17 @@ public class Main {
     }
     public static Uzel initSeznam(int delkaSeznamu){
         Uzel prvniUzel = new Uzel(1);
-        Uzel posledniUzel = new Uzel(5);
+
+
+        Uzel predesliUzel = prvniUzel;
 
         for (int i = 2; i <= delkaSeznamu; i++) {
-            prvniUzel.getFront();
-            posledniUzel.getLast();
+            Uzel newUzel = new Uzel(i);
+            newUzel.setFront(predesliUzel);
+
+            predesliUzel.setLast(newUzel);
+            predesliUzel = newUzel;
+
         }
         return prvniUzel;
     }
